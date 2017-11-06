@@ -24,10 +24,10 @@ var addNewUserToDatabaseAsync = function(user) {
 };
 
 addNewUserToDatabaseAsync({ name: 'Dan', password: 'chickennuggets' })
-  .then(function(savedUser) {
+  .then(function(savedUser) { // trigger this if the new user was added successfully
     console.log('All done!');
   })
-  .catch(function(err) {
+  .catch(function(err) { // trigger this if there was an error in adding the new user
     // Will catch any promise rejections or thrown errors in the chain!
     console.log('Oops, caught an error: ', err.message);
   });
